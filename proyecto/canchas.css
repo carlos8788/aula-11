@@ -1,0 +1,28 @@
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    margin: 0 10px;
+    text-align: justify;
+}
+
+@media (width > 576px) {
+    h1 {
+        margin: 10px 0;
+    }
+    p {
+        font-size: 18px;
+        background-color: aquamarine;
+        margin: 0 5px;
+        text-align: justify;
+    }
+}
+
+@media (width > 576px) {
+    h1 {
+        font-size: 50px;
+    }
+}

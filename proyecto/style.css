@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+/* HEADER */
+
+header .menunav-menu {
+    background-color: rgb(14, 92, 13);
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header .menunav-menu li {
+    list-style: none;
+
+}
+
+header .menunav-menu li a {
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+
+/* MAIN */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 400px;
+    grid-template-areas:
+        "title title"
+        "paragraph list";
+    gap: 50px;
+}
+
+.titulo {
+    grid-area: title;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.titulo h1 {
+    font-size: 40px;
+}
+
+.titulo h3 {
+    font-size: 25px;
+}
+
+.parrafo {
+    grid-area: paragraph;
+    text-align: justify;
+    padding: 0 50px;
+}
+
+.parrafo h2 {
+    margin-bottom: 20px;
+}
+
+.parrafo p span {
+    display: block;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.lista {
+    grid-area: list;
+
+}
+
+.lista-ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.lista-ul li {
+    list-style: square;
+}
+
+@media (width < 1300px) {
+    body {
+        background-color: red;
+    }
+
+    header .menunav-menu {
+        display: none;
+        gap: 10px;
+        background-color: blue;
+        font-size: 12px;
+    }
+
+    .main-navigation {
+        height: 75px;
+        background-color: rgb(14, 92, 13);
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .lista-ul {
+        padding: 50px;
+    }
+}
+
+@media (width < 1200px) {
+    body{
+        background-color: green;
+    }
+
+    .titulo h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .titulo p {
+        margin: 0 50px;
+    }
+}
+
+@media (width < 720px){
+    body{
+        background-color: blue;
+    }
+
+    .titulo h1 {
+        margin: 0 50px;
+    }
+}
+
+@media (width < 500px){
+    .titulo h3 {
+        margin: 20px;
+        text-align: center;
+    }
+}
