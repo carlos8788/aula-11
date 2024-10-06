@@ -23,68 +23,58 @@ li {
     list-style: none;
 }
 
-div{
-    position: relative;
-    height: 300px;
+
+/* .contenedor-relativo{
     width: 600px;
+    height: 400px;
     background-color: gray;
-    z-index: -100;
+    position: relative;
+    left: 50px;
 }
-
-div h2{
+.contenedor-relativo h2 {
     position: absolute;
-    top: 10px;
-    left: 10px;
-
+    top: 20px;
+    z-index: 100;
+    top: 30px;
 }
-
-.box {
-    width: 50px;
-    height: 50px;
+.box{
     background-color: green;
-    z-index: -10;
-}
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    left: 100px;
+    bottom: 90px;
+} */
 
 .boton-flotante{
     background-color: green;
-    width: 40px;
-    height: 40px;
-    font-size: 8px;
     color: white;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50%;
+
     position: fixed;
-    right: 10px;
-    bottom: 10px;
-    z-index: 10;
+    bottom: 50px;
+    right: 50px;
 }
 
-li::before {
-    content: " ➡️";
+.boton-flotante:hover{
+    box-shadow: 5px 5px 2px black;
 }
 
-@keyframes mover {
-    0%{
-        transform: rotate(0);
-    }
+/* PSEUDOELEMENTOS */
 
-    50% {
-        transform: rotate(90deg);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
+li::after {
+    content: " ⬅️";
 }
 
-
-
-.box-animation {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    animation: mover 2s infinite;
+p::selection{
+    background-color: green;
+    color: white;
 }

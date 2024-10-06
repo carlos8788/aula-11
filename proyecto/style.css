@@ -11,8 +11,17 @@ a {
     text-transform: uppercase;
 }
 
+/* BODY */
+
+
 
 /* HEADER */
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
 
 header .menunav-menu {
     background-color: rgb(14, 92, 13);
@@ -34,29 +43,49 @@ header .menunav-menu li a {
     font-size: 18px;
 }
 
+.menu-item {
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
 
+.menu-item:hover {
+    background-color: green;
+}
 
 /* MAIN */
 
 .contenedor {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 200px 400px;
-    grid-template-areas:
-        "title title"
-        "paragraph list";
-    gap: 50px;
+    position: relative;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.img-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 
 .titulo {
     grid-area: title;
-
     /* flexbox */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+
+
+    text-shadow: 2px 2px 5px white;
 }
 
 .titulo h1 {
@@ -67,10 +96,25 @@ header .menunav-menu li a {
     font-size: 25px;
 }
 
+
+.footer-main {
+    position: absolute;
+    bottom: 60px;
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.subtitulo {
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+
 .parrafo {
-    grid-area: paragraph;
-    text-align: justify;
-    padding: 0 50px;
+    width: 50%;
 }
 
 .parrafo h2 {

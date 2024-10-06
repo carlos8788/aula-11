@@ -6,9 +6,27 @@ button {
     width: 100px;
     padding: 10px;
     margin: 5px;
-    transition: background-color 0.3s ease-in-out;
+    /* animation: mover 2s ease-in-out infinite; */
+    transition: all 0.2s ease-in-out;
 }
 
 button:hover{
-    background-color: rgb(17, 17, 225);
+    background-color: rgb(15, 7, 131);
 }
+
+/* @keyframes mover {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} */
